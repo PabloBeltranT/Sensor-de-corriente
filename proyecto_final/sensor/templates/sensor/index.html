@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'sensor/index.css' %}">
+    <title>Sensor de corriente</title>
+</head>
+<body>
+
+    <section class="viewer">
+        <h1>Corriente sensada</h1>
+        <h2 id="prueba"> Fuente </h2>
+        <h2 id="corriente">{{ corriente }}</h2>
+    </section>
+
+    <section class="info-consum">
+        <h1 class="title_directa">Potencia consumida desde banco de baterias:</h1>
+        <h2 class="viewer_directa">{{ pot_directa }}</h2>
+
+        <h1 class="title_red">Potencia consumida desde red electrica:</h1>
+        <h2 class="viewer_red">{{ pot_red }}</h2>
+    </section>
+
+    <script src="{% static 'sensor/index.js' %}"></script>
+    
+</body>
+</html>
